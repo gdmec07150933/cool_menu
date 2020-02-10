@@ -1,7 +1,7 @@
 import express,{Application,Request,Response,NextFunction} from 'express';
-import mysql from 'mysql'
-const app:express.Application = express();
 
+const app:express.Application = express();
+const mysql = require('mysql')
 const connection = mysql.createConnection({
     host:'127.0.0.1',
     port:3306,
@@ -11,4 +11,4 @@ const connection = mysql.createConnection({
 })
 
 connection.connect();
-app.listen(5000, ()=>console.log('Server is running'))
+app.listen(5000, ()=>console.log('Server is running')) 
